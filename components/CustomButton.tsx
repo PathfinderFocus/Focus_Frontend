@@ -34,8 +34,6 @@ const styles = StyleSheet.create({
     borderStyle: 'solid',
     borderColor: 'rgba(255, 255, 255, 0.12)',
     borderWidth: 1,
-    width: '100%',
-    height: 48,
     overflow: 'hidden',
     flexDirection: 'row',
     alignItems: 'center',

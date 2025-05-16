@@ -8,6 +8,7 @@ import * as React from "react";
 import {SafeAreaView} from "react-native-safe-area-context";
 import CustomButton from '../components/CustomButton';
 import NavBar from '../components/NavBar';
+import CustomCard from '../components/Card';
 
 type NavigationProp = NativeStackNavigationProp<RootStackParamList, 'Home'>;
 
@@ -16,6 +17,7 @@ export default function HomeScreen() {
       <View style={{ padding: 20 }}>
         <CustomButton title="Log In" onPress={() => console.log('Button pressed')} />
         <NavBar />
+        <CustomCard title="title" subtitle="subtitle" useButton={true} />
       </View>
     );
   }

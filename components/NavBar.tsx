@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, Text, StyleSheet, Pressable, StyleProp, ViewStyle, TextStyle, Image } from 'react-native';
+import { View, StyleSheet, Pressable, Image } from 'react-native';
 import Colors from '../constants/Colors';
 
 const moveToTask = () => {
