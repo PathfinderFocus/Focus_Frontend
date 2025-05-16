@@ -7,6 +7,7 @@ import styles from './HomeScreen.styles';
 import * as React from "react";
 import {SafeAreaView} from "react-native-safe-area-context";
 import CustomButton from '../components/CustomButton';
+import NavBar from '../components/NavBar';
 
 type NavigationProp = NativeStackNavigationProp<RootStackParamList, 'Home'>;
 
@@ -14,6 +15,7 @@ export default function HomeScreen() {
     return (
       <View style={{ padding: 20 }}>
         <CustomButton title="Log In" onPress={() => console.log('Button pressed')} />
+        <NavBar />
       </View>
     );
   }
