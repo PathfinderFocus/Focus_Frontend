@@ -5,7 +5,7 @@ import CustomButton from './CustomButton';
 
 type CustomCardProps = {
   title: string;
-  subtitle: string;
+  subtitle?: string;
   containerStyle?: StyleProp<ViewStyle>;
   textStyle?: StyleProp<TextStyle>;
   useButton: boolean;
@@ -20,7 +20,11 @@ const CustomCard = ({ title, subtitle, containerStyle, useButton }: CustomCardPr
     <View style={[styles.card]}>
       <View style={styles.texts}>
         <Text style={[styles.title]}>{title}</Text>
-        <Text style={[styles.subtitle]}>{subtitle}</Text>
+        {
+            subtitle ? (
+                <Text style={[styles.subtitle]}>{subtitle}</Text>
+            ) : (<></>)
+        }
       </View>
       {
         useButton ? (
