@@ -9,13 +9,10 @@ type MainCardProps = {
   title: string;
   subtitle: string;
   buttonValue: string;
+  onPress?: () => void;
 };
 
-const buttonOnPress = () => {
-    console.log('Card Button Pressed');
-}
-
-const MainCard = ({ title, subtitle, buttonValue }: MainCardProps) => {
+const MainCard = ({ title, subtitle, buttonValue, onPress }: MainCardProps) => {
   const [fontsLoaded] = useFonts({
     'GodoB': require('../assets/fonts/GodoB.ttf'),
     'GodoM': require('../assets/fonts/GodoM.ttf'),
@@ -32,7 +29,7 @@ const MainCard = ({ title, subtitle, buttonValue }: MainCardProps) => {
           <Text style={styles.subtitle}>{subtitle}</Text>
         </View>
       </View>
-      <CustomButton title={buttonValue} onPress={buttonOnPress} containerStyle={styles.button} textStyle={styles.buttonText} />
+      <CustomButton title={buttonValue} onPress={onPress} containerStyle={styles.button} textStyle={styles.buttonText} />
     </View>
   );
 };

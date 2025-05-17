@@ -1,4 +1,6 @@
 import * as React from 'react';
+import * as Font from 'expo-font';
+import { useFonts } from 'expo-font';
 import { View, Text, StyleSheet, Pressable, StyleProp, ViewStyle, TextStyle } from 'react-native';
 import Colors from '../constants/Colors';
 import CustomButton from './CustomButton';
@@ -16,6 +18,11 @@ const buttonOnPress = () => {
 }
 
 const CustomCard = ({ title, subtitle, containerStyle, useButton }: CustomCardProps) => {
+  const [fontsLoaded] = useFonts({
+    'GodoB': require('../assets/fonts/GodoB.ttf'),
+    'GodoM': require('../assets/fonts/GodoM.ttf'),
+  })
+
   return (
     <View style={[styles.card]}>
       <View style={styles.texts}>
@@ -39,18 +46,16 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 24,
     letterSpacing: -0.1,
-    lineHeight: 20,
-    fontWeight: '500',
-    fontFamily: 'Inter-Medium',
+    lineHeight: 24,
+    fontFamily: 'GodoB',
     color: Colors.black,
     textAlign: 'left',
   },
   subtitle: {
     fontSize: 14,
     letterSpacing: -0.1,
-    lineHeight: 20,
-    fontWeight: '500',
-    fontFamily: 'Inter-Medium',
+    lineHeight: 24,
+    fontFamily: 'GodoM',
     color: Colors.black,
     textAlign: 'left',
   },

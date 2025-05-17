@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
     container: {
         position: 'absolute',
         right: 0,
-        bottom: 36,
+        bottom: 24,
         left: 0,
         alignSelf: 'stretch',
         paddingHorizontal: 12,
