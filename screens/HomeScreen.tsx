@@ -10,22 +10,21 @@ import NavBar from '../components/NavBar';
 import CustomCard from '../components/Card';
 import MainCard from '../components/MainCard';
 import RowCard from '../components/RowCard';
+import InputLabel from '../components/InputLabel';
+import { useState } from 'react';
 
 type NavigationProp = NativeStackNavigationProp<RootStackParamList, 'Home'>;
 
 export default function HomeScreen() {
+    const [id, setId] = useState("");
     return (
       <View style={{ padding: 20 }}>
-        <CustomButton title="Log In" onPress={() => console.log('Button pressed')} />
-        <NavBar />
-        <CustomCard title="title" subtitle="subtitle" useButton={true} />
-        <View style={styles.cards}>
-          <MainCard title='Set Your Goal' subtitle='Your study journey begins here.' buttonValue='Start Planning' />
-          <View style={styles.cardRow}>
-            <RowCard title='Study History' subtitle="See how much time you've invested in yourself." buttonValue='See History' />
-            <RowCard title='Study With Friends' subtitle='See what your friends studied today.' buttonValue='Check It Out' />
-          </View>
-        </View>
+        <InputLabel
+        label="ID"
+        placeholder="Please enter your ID.."
+        value={id}
+        onChangeText={setId}
+      />
       </View>
     );
   }
