@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Text, StyleSheet, Pressable, StyleProp, ViewStyle, TextStyle } from 'react-native';
+import Colors from '../constants/Colors';
 
 type CustomButtonProps = {
   title: string;
@@ -23,18 +24,16 @@ const styles = StyleSheet.create({
     lineHeight: 20,
     fontWeight: '500',
     fontFamily: 'Inter-Medium',
-    color: '#fff',
+    color: Colors.white,
     textAlign: 'center',
   },
   button: {
     alignSelf: 'stretch',
     borderRadius: 10,
-    backgroundColor: '#acc572',
+    backgroundColor: Colors.primary,
     borderStyle: 'solid',
     borderColor: 'rgba(255, 255, 255, 0.12)',
     borderWidth: 1,
-    width: '100%',
-    height: 48,
     overflow: 'hidden',
     flexDirection: 'row',
     alignItems: 'center',
