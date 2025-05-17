@@ -3,11 +3,11 @@ export default {
     primary: '#ACC572',
     secondary: '#FFFFFF',
     white: '#F9F9F9',
-    black: '#FFFFFF',
+    black: '#2A2A2A',
     red: '#FFFFFF',
     gray: '#FFFFFF',
     lightGray: '#FFFFFF',
     background: '#FFFFFF',
-    text: '#000',
+    text: '#2A2A2A',
   };
   
