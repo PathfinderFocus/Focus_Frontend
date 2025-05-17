@@ -9,13 +9,10 @@ type RowCardProps = {
   title: string;
   subtitle: string;
   buttonValue: string;
+  onPress?: () => void;
 };
 
-const buttonOnPress = () => {
-    console.log('Card Button Pressed');
-}
-
-const RowCard = ({ title, subtitle, buttonValue }: RowCardProps) => {
+const RowCard = ({ title, subtitle, buttonValue, onPress }: RowCardProps) => {
   const [fontsLoaded] = useFonts({
     'GodoB': require('../assets/fonts/GodoB.ttf'),
     'GodoM': require('../assets/fonts/GodoM.ttf'),
@@ -32,13 +29,15 @@ const RowCard = ({ title, subtitle, buttonValue }: RowCardProps) => {
           <Text style={styles.subtitle}>{subtitle}</Text>
         </View>
       </View>
-      <CustomButton title={buttonValue} onPress={buttonOnPress} containerStyle={styles.button} textStyle={styles.buttonText} />
+      <CustomButton title={buttonValue} onPress={onPress} containerStyle={styles.button} textStyle={styles.buttonText} />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   column: {
+    flex: 1,
+    flexShrink: 1,
     alignSelf: 'stretch',
     flexDirection: 'row',
     gap: 8,
