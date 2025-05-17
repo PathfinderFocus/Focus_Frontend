@@ -39,6 +39,8 @@ const RowCard = ({ title, subtitle, buttonValue }: RowCardProps) => {
 
 const styles = StyleSheet.create({
   column: {
+    flex: 1,
+    flexShrink: 1,
     alignSelf: 'stretch',
     flexDirection: 'row',
     gap: 8,
